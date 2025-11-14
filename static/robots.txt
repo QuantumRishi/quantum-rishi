@@ -1,0 +1,6 @@
+# Phase 13: Updated robots.txt with sitemap reference
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://quantum-rishi.com/sitemap.xml

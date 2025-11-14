@@ -1,0 +1,29 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"ui": "tui",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": [".svelte-kit/**", ".cloudflare/**"]
+		},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"format": {
+			"cache": false
+		},
+		"check": {
+			"dependsOn": ["^check"]
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"outputs": ["playwright-report/**", "test-results/**"]
+		}
+	},
+	"globalEnv": ["NODE_ENV"],
+	"globalDependencies": ["package.json", "pnpm-workspace.yaml", "tsconfig.json"]
+}

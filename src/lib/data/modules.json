@@ -1,0 +1,272 @@
+{
+	"qr-ai": {
+		"modules": [
+			{
+				"id": "llm",
+				"slug": "llm",
+				"name": "Large Language Models",
+				"description": "Fine-tuned LLMs for domain-specific applications and conversational AI",
+				"icon": "message-square",
+				"features": ["GPT Fine-tuning", "RAG Systems", "Prompt Engineering"],
+				"subdomain": "ai.quantum-rishi.com"
+			},
+			{
+				"id": "computer-vision",
+				"slug": "computer-vision",
+				"name": "Computer Vision",
+				"description": "Image recognition, object detection, and visual intelligence systems",
+				"icon": "eye",
+				"features": ["Object Detection", "Image Classification", "OCR"],
+				"subdomain": "ai.quantum-rishi.com"
+			},
+			{
+				"id": "predictive-analytics",
+				"slug": "predictive-analytics",
+				"name": "Predictive Analytics",
+				"description": "Time series forecasting and predictive modeling for business intelligence",
+				"icon": "trending-up",
+				"features": ["Forecasting", "Anomaly Detection", "Pattern Recognition"],
+				"subdomain": "ai.quantum-rishi.com"
+			},
+			{
+				"id": "nlp",
+				"slug": "nlp",
+				"name": "Natural Language Processing",
+				"description": "Text analysis, sentiment analysis, and language understanding systems",
+				"icon": "file-text",
+				"features": ["Sentiment Analysis", "Named Entity Recognition", "Text Classification"],
+				"subdomain": "ai.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-data": {
+		"modules": [
+			{
+				"id": "data-warehouse",
+				"slug": "data-warehouse",
+				"name": "Data Warehouse",
+				"description": "Scalable data warehousing solutions with ETL pipelines",
+				"icon": "database",
+				"features": ["ETL Pipelines", "Data Lakes", "OLAP"],
+				"subdomain": "data.quantum-rishi.com"
+			},
+			{
+				"id": "real-time-analytics",
+				"slug": "real-time-analytics",
+				"name": "Real-time Analytics",
+				"description": "Stream processing and real-time data analytics platform",
+				"icon": "activity",
+				"features": ["Stream Processing", "Real-time Dashboards", "Event Analytics"],
+				"subdomain": "data.quantum-rishi.com"
+			},
+			{
+				"id": "data-visualization",
+				"slug": "data-visualization",
+				"name": "Data Visualization",
+				"description": "Interactive dashboards and advanced data visualization tools",
+				"icon": "bar-chart",
+				"features": ["Interactive Dashboards", "Custom Charts", "BI Reports"],
+				"subdomain": "data.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-cloud": {
+		"modules": [
+			{
+				"id": "infrastructure",
+				"slug": "infrastructure",
+				"name": "Cloud Infrastructure",
+				"description": "Scalable cloud infrastructure with auto-scaling and load balancing",
+				"icon": "server",
+				"features": ["Auto-scaling", "Load Balancing", "Container Orchestration"],
+				"subdomain": "cloud.quantum-rishi.com"
+			},
+			{
+				"id": "storage",
+				"slug": "storage",
+				"name": "Cloud Storage",
+				"description": "Object storage, block storage, and CDN services",
+				"icon": "hard-drive",
+				"features": ["Object Storage", "Block Storage", "CDN"],
+				"subdomain": "cloud.quantum-rishi.com"
+			},
+			{
+				"id": "serverless",
+				"slug": "serverless",
+				"name": "Serverless Computing",
+				"description": "Function-as-a-Service platform for event-driven architectures",
+				"icon": "zap",
+				"features": ["FaaS", "Event-driven", "Auto-scaling"],
+				"subdomain": "cloud.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-block": {
+		"modules": [
+			{
+				"id": "smart-contracts",
+				"slug": "smart-contracts",
+				"name": "Smart Contracts",
+				"description": "Develop and deploy secure smart contracts on multiple chains",
+				"icon": "file-code",
+				"features": ["Multi-chain Support", "Security Audits", "Gas Optimization"],
+				"subdomain": "block.quantum-rishi.com"
+			},
+			{
+				"id": "defi",
+				"slug": "defi",
+				"name": "DeFi Solutions",
+				"description": "Decentralized finance protocols and yield farming platforms",
+				"icon": "coins",
+				"features": ["Liquidity Pools", "Yield Farming", "Token Swaps"],
+				"subdomain": "block.quantum-rishi.com"
+			},
+			{
+				"id": "nft",
+				"slug": "nft",
+				"name": "NFT Platform",
+				"description": "Create, mint, and trade NFTs on decentralized marketplaces",
+				"icon": "image",
+				"features": ["NFT Minting", "Marketplace", "Royalty Management"],
+				"subdomain": "block.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-cyber": {
+		"modules": [
+			{
+				"id": "threat-detection",
+				"slug": "threat-detection",
+				"name": "Threat Detection",
+				"description": "AI-powered threat detection and security monitoring",
+				"icon": "shield-alert",
+				"features": ["Real-time Monitoring", "Anomaly Detection", "Threat Intelligence"],
+				"subdomain": "cyber.quantum-rishi.com"
+			},
+			{
+				"id": "encryption",
+				"slug": "encryption",
+				"name": "Quantum Encryption",
+				"description": "Quantum-resistant encryption protocols and secure communications",
+				"icon": "lock",
+				"features": ["Post-quantum Cryptography", "End-to-end Encryption", "Key Management"],
+				"subdomain": "cyber.quantum-rishi.com"
+			},
+			{
+				"id": "penetration-testing",
+				"slug": "penetration-testing",
+				"name": "Penetration Testing",
+				"description": "Automated security audits and vulnerability assessments",
+				"icon": "shield-check",
+				"features": ["Automated Scans", "Vulnerability Reports", "Compliance Checks"],
+				"subdomain": "cyber.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-digi": {
+		"modules": [
+			{
+				"id": "digital-art",
+				"slug": "digital-art",
+				"name": "Digital Art Studio",
+				"description": "AI-assisted digital art creation and generative design tools",
+				"icon": "palette",
+				"features": ["AI Art Generation", "Style Transfer", "Digital Painting"],
+				"subdomain": "digi.quantum-rishi.com"
+			},
+			{
+				"id": "interactive-experiences",
+				"slug": "interactive-experiences",
+				"name": "Interactive Experiences",
+				"description": "Immersive web experiences with animations and 3D graphics",
+				"icon": "play",
+				"features": ["WebGL", "3D Animations", "Interactive UI"],
+				"subdomain": "digi.quantum-rishi.com"
+			},
+			{
+				"id": "motion-graphics",
+				"slug": "motion-graphics",
+				"name": "Motion Graphics",
+				"description": "Professional motion graphics and video animation services",
+				"icon": "film",
+				"features": ["2D/3D Animation", "Video Effects", "Motion Design"],
+				"subdomain": "digi.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-studio": {
+		"modules": [
+			{
+				"id": "video-production",
+				"slug": "video-production",
+				"name": "Video Production",
+				"description": "Professional video production and post-production services",
+				"icon": "video",
+				"features": ["Filming", "Editing", "Color Grading"],
+				"subdomain": "studio.quantum-rishi.com"
+			},
+			{
+				"id": "content-creation",
+				"slug": "content-creation",
+				"name": "Content Creation",
+				"description": "Multi-format content creation for digital platforms",
+				"icon": "edit",
+				"features": ["Copywriting", "Social Media", "Blog Posts"],
+				"subdomain": "studio.quantum-rishi.com"
+			},
+			{
+				"id": "brand-design",
+				"slug": "brand-design",
+				"name": "Brand Design",
+				"description": "Complete brand identity and visual design systems",
+				"icon": "award",
+				"features": ["Logo Design", "Brand Guidelines", "Visual Identity"],
+				"subdomain": "studio.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-labs": {
+		"modules": [
+			{
+				"id": "research-projects",
+				"slug": "research-projects",
+				"name": "Research Projects",
+				"description": "Cutting-edge R&D projects in emerging technologies",
+				"icon": "beaker",
+				"features": ["Experimental Tech", "Prototyping", "Innovation"],
+				"subdomain": "labs.quantum-rishi.com"
+			},
+			{
+				"id": "proof-of-concept",
+				"slug": "proof-of-concept",
+				"name": "Proof of Concept",
+				"description": "Rapid prototyping and validation of new technology ideas",
+				"icon": "lightbulb",
+				"features": ["MVP Development", "Technology Validation", "Feasibility Studies"],
+				"subdomain": "labs.quantum-rishi.com"
+			}
+		]
+	},
+	"qr-future": {
+		"modules": [
+			{
+				"id": "emerging-tech",
+				"slug": "emerging-tech",
+				"name": "Emerging Technologies",
+				"description": "Exploration of next-generation technologies and trends",
+				"icon": "telescope",
+				"features": ["Technology Scouting", "Trend Analysis", "Future Planning"],
+				"subdomain": "future.quantum-rishi.com"
+			},
+			{
+				"id": "innovation-lab",
+				"slug": "innovation-lab",
+				"name": "Innovation Lab",
+				"description": "Experimental lab for testing futuristic concepts",
+				"icon": "cpu",
+				"features": ["Concept Testing", "Innovation Workshops", "Future Scenarios"],
+				"subdomain": "future.quantum-rishi.com"
+			}
+		]
+	}
+}
