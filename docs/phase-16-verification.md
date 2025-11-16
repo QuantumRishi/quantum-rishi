@@ -27,13 +27,14 @@ Cloudflare Pages deployment.
 | File                                   | Size  | Status | Purpose                   |
 | -------------------------------------- | ----- | ------ | ------------------------- |
 | DEPLOYMENT.md                          | 9.4KB | ✅     | Complete deployment guide |
-| wrangler.toml                          | 0.6KB | ✅     | Cloudflare Pages config   |
 | docs/phase-16-deployment-checklist.md  | 7.6KB | ✅     | Deployment checklist      |
 | docs/phase-16-quickstart.md            | 3.2KB | ✅     | 5-minute quick start      |
 | docs/phase-16-summary.md               | 8.8KB | ✅     | Implementation summary    |
 | docs/phase-16-verification.md          | -     | ✅     | This verification report  |
 | .github/workflows/cloudflare-pages.yml | 3.3KB | ✅     | CI/CD automation          |
 | README.md (updated)                    | 5.5KB | ✅     | Project overview          |
+
+> **Note:** Cloudflare Pages does not require `wrangler.toml`. Configuration is managed through the Cloudflare dashboard.
 
 ### Build Verification
 
@@ -434,8 +435,10 @@ pnpm run preview
 
 - Build output: `.svelte-kit/cloudflare/`
 - Documentation: `DEPLOYMENT.md`, `docs/phase-16-*.md`
-- Configuration: `wrangler.toml`, `svelte.config.js`
+- Configuration: `svelte.config.js` (Cloudflare adapter)
 - Workflow: `.github/workflows/cloudflare-pages.yml`
+
+> **Note:** Cloudflare Pages does not require `wrangler.toml` - configuration is managed through the dashboard.
 
 ### Support Resources
 

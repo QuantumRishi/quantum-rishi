@@ -51,10 +51,11 @@ All Phase 16 tasks are now complete:
 | File                                     | Purpose                                        |
 | ---------------------------------------- | ---------------------------------------------- |
 | `DEPLOYMENT.md`                          | Complete deployment guide with troubleshooting |
-| `wrangler.toml`                          | Cloudflare Pages configuration                 |
 | `docs/phase-16-deployment-checklist.md`  | Detailed checklist for deployment              |
 | `docs/phase-16-quickstart.md`            | This quick start guide                         |
 | `.github/workflows/cloudflare-pages.yml` | CI/CD automation                               |
+
+> **Note:** Cloudflare Pages configuration is done through the dashboard, not `wrangler.toml`. The `wrangler.toml` file is only needed for Cloudflare Workers deployments.
 
 ## Existing Phase 14 Files (Performance)
 
