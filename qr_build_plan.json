@@ -1,211 +1,211 @@
 {
-	"project": "Quantum Rishi™ (Unified Ecosystem Landing Platform)",
-	"repo": "quantum-rishi",
-	"tech_stack": {
-		"frontend": "SvelteKit + TypeScript",
-		"styling": "TailwindCSS",
-		"animation": "GSAP + Motion (svelte-motion)",
-		"graphics": "Three.js (for cosmic visuals)",
-		"package_manager": "pnpm",
-		"deployment_target": "Cloudflare Pages (temporary, easily migratable)",
-		"cms": "Static JSON (divisions + modules metadata)"
-	},
-	"phases": [
-		{
-			"phase": 1,
-			"title": "Environment Bootstrap",
-			"goal": "Create a fresh SvelteKit project with all dependencies",
-			"tasks": [
-				"Delete old repo files if not needed",
-				"Run: `pnpm create svelte@latest quantum-rishi`",
-				"Enable TypeScript + ESLint + Prettier",
-				"Install: tailwindcss, postcss, autoprefixer, gsap, three, @tailwindcss/forms, lucide-svelte",
-				"Setup Tailwind config with dark mode 'class'",
-				"Add global styles: fonts (Space Grotesk, Inter, JetBrains Mono)"
-			]
-		},
-		{
-			"phase": 2,
-			"title": "Project Structure Setup",
-			"goal": "Create clean directory tree and layout files",
-			"tasks": [
-				"Inside /src create folders: routes, lib/components, lib/styles, lib/data",
-				"In routes, create +layout.svelte and +layout.ts for global structure",
-				"Setup meta tags, favicon, OG image placeholders",
-				"Add /lib/styles/tokens.css with brand color variables"
-			]
-		},
-		{
-			"phase": 3,
-			"title": "Global Design System",
-			"goal": "Define consistent design tokens and base UI",
-			"tasks": [
-				"In /lib/styles/tokens.css define primary, secondary, accent colors based on Quantum Rishi palette",
-				"Setup reusable Tailwind classes for card, button, and section spacing",
-				"Create typography scale (H1–H6, paragraph, small)",
-				"Create reusable Svelte components: Button, Card, SectionTitle, Badge",
-				"Test basic grid + flex layout responsiveness"
-			]
-		},
-		{
-			"phase": 4,
-			"title": "Global Layout and Navigation",
-			"goal": "Build site-wide header, footer, and base structure",
-			"tasks": [
-				"Create Navbar.svelte with logo + tagline + category dropdowns",
-				"Add links: Home, Divisions, Studio, Technology, Contact",
-				"Create Footer.svelte with quick links, copyright, and social icons",
-				"Make Navbar sticky and dark-theme compatible",
-				"Add global transition animations on route change"
-			]
-		},
-		{
-			"phase": 5,
-			"title": "Hero Section (Landing Page Intro)",
-			"goal": "Cinematic introduction for Quantum Rishi Ecosystem",
-			"tasks": [
-				"Create HeroSection.svelte",
-				"Headline: 'We Build Intelligent Autonomous Systems for a Secure, Scalable and Future-Ready India'",
-				"Add Subheadline: 'AI + Blockchain + Quantum-inspired Security — unified into one ecosystem'",
-				"Insert 3D background animation using Three.js (cosmic particle field)",
-				"Add CTAs: 'Launch QR Studio' and 'Explore Ecosystem'",
-				"Animate hero text with GSAP fade + upward reveal"
-			]
-		},
-		{
-			"phase": 6,
-			"title": "Landing Page – Meta-Category Layout",
-			"goal": "Create categorized grid layout for all divisions",
-			"tasks": [
-				"Create Section: Digital Core, Applied Tech, Knowledge Systems, R&D & Vision",
-				"Each section header = SectionTitle component with neon underline",
-				"Each section grid = 5x2 responsive cards (divisions)",
-				"Hover: glow + display division tagline",
-				"Click: navigate to /divisions/[slug]"
-			]
-		},
-		{
-			"phase": 7,
-			"title": "Division Data System",
-			"goal": "Centralize data of all divisions and modules",
-			"tasks": [
-				"Create /lib/data/divisions.json with structure:",
-				"{ 'qr.ai': { name: 'QR.AI', category: 'Digital Core', tagline: 'AI & ML Systems', color: '#28E5FF', services: ['LLM fine-tuning','Computer Vision','Predictive Analytics'] } }",
-				"Create DivisionsStore.ts to load JSON and export readable store",
-				"Connect landing grid to dynamic JSON data"
-			]
-		},
-		{
-			"phase": 8,
-			"title": "Dynamic Division Routing",
-			"goal": "Enable /divisions/[slug] pages with automatic generation",
-			"tasks": [
-				"Create /src/routes/divisions/[slug]/+page.svelte",
-				"Use load() to fetch matching data from divisions.json",
-				"Add hero with division color + animated background",
-				"Render key modules / services as cards",
-				"Add CTA: 'Open Platform →' linking to planned sub-domain"
-			]
-		},
-		{
-			"phase": 9,
-			"title": "Division-Specific Layout Variations",
-			"goal": "Give each division unique content type layout",
-			"tasks": [
-				"Add conditional layouts: Technical, Creative, or Knowledge",
-				"Example: QR.AI shows architecture diagram; QR.Digi shows media slider",
-				"Use component variants (TechLayout, CreativeLayout, EduLayout)",
-				"Apply accent colors automatically via data.color"
-			]
-		},
-		{
-			"phase": 10,
-			"title": "Modules System (Nested under Divisions)",
-			"goal": "Enable clickable module-level pages linking to sub-domains",
-			"tasks": [
-				"Create folder: /src/routes/divisions/[slug]/modules/[module]/+page.svelte",
-				"Each module pulls data from modules.json (sub-collection of divisions)",
-				"Add CTA button redirecting to corresponding sub-domain (e.g. ai.quantum-rishi.com)",
-				"Style module cards with glowing hover effect"
-			]
-		},
-		{
-			"phase": 11,
-			"title": "Motion & Interaction Enhancements",
-			"goal": "Polish user experience with high-end animation",
-			"tasks": [
-				"Integrate GSAP ScrollTrigger for section reveals",
-				"Add parallax scroll on hero and cosmic background",
-				"Create smooth scroll navigation across category sections",
-				"Implement hover pulse animations on CTA buttons"
-			]
-		},
-		{
-			"phase": 12,
-			"title": "Global Responsiveness & Accessibility",
-			"goal": "Ensure accessibility and perfect scaling",
-			"tasks": [
-				"Optimize all sections for mobile-first design",
-				"Add ARIA labels and keyboard navigation for major components",
-				"Use prefers-reduced-motion for animation fallback",
-				"Ensure text contrast meets WCAG AA standards"
-			]
-		},
-		{
-			"phase": 13,
-			"title": "SEO + Meta Data System",
-			"goal": "Integrate automatic SEO and social share metadata",
-			"tasks": [
-				"Add title + meta description from divisions.json",
-				"Implement dynamic OG tags per page",
-				"Add structured schema.org data for SoftwareApplication type",
-				"Integrate sitemap.xml + robots.txt"
-			]
-		},
-		{
-			"phase": 14,
-			"title": "Performance Optimization",
-			"goal": "Fine-tune build output for speed and scalability",
-			"tasks": [
-				"Enable code splitting and lazy loading for heavy assets",
-				"Use image optimization and compression for icons/backgrounds",
-				"Test Lighthouse (target >90)",
-				"Implement Cloudflare cache headers"
-			]
-		},
-		{
-			"phase": 15,
-			"title": "Testing & QA",
-			"goal": "Automate tests for UI and navigation",
-			"tasks": [
-				"Add Playwright for e2e testing of routing",
-				"Check mobile viewport scaling",
-				"Verify animation smoothness under 60fps",
-				"Fix any console errors"
-			]
-		},
-		{
-			"phase": 16,
-			"title": "Deployment & Domain Configuration",
-			"goal": "Publish working site and connect domain",
-			"tasks": [
-				"Connect repo to Cloudflare Pages project",
-				"Set build command: `pnpm run build`",
-				"Verify base path routing works correctly",
-				"Connect domain: quantum-rishi.com",
-				"Verify HTTPS + redirects"
-			]
-		},
-		{
-			"phase": 17,
-			"title": "Future Sub-Domain Preparation",
-			"goal": "Prepare base templates for each future micro-site",
-			"tasks": [
-				"Inside /apps create folders: ai, block, cloud, cyber, digi, studio, labs, future",
-				"Add README.md + minimal +page.svelte placeholder",
-				"Prepare DNS entries for each (ai.quantum-rishi.com etc.)",
-				"Add Turborepo workspace config for future separation"
-			]
-		}
-	]
+  "project": "Quantum Rishi™ (Unified Ecosystem Landing Platform)",
+  "repo": "quantum-rishi",
+  "tech_stack": {
+    "frontend": "SvelteKit + TypeScript",
+    "styling": "TailwindCSS",
+    "animation": "GSAP + Motion (svelte-motion)",
+    "graphics": "Three.js (for cosmic visuals)",
+    "package_manager": "pnpm",
+    "deployment_target": "Cloudflare Pages (temporary, easily migratable)",
+    "cms": "Static JSON (divisions + modules metadata)"
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Environment Bootstrap",
+      "goal": "Create a fresh SvelteKit project with all dependencies",
+      "tasks": [
+        "Delete old repo files if not needed",
+        "Run: `pnpm create svelte@latest quantum-rishi`",
+        "Enable TypeScript + ESLint + Prettier",
+        "Install: tailwindcss, postcss, autoprefixer, gsap, three, @tailwindcss/forms, lucide-svelte",
+        "Setup Tailwind config with dark mode 'class'",
+        "Add global styles: fonts (Space Grotesk, Inter, JetBrains Mono)"
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Project Structure Setup",
+      "goal": "Create clean directory tree and layout files",
+      "tasks": [
+        "Inside /src create folders: routes, lib/components, lib/styles, lib/data",
+        "In routes, create +layout.svelte and +layout.ts for global structure",
+        "Setup meta tags, favicon, OG image placeholders",
+        "Add /lib/styles/tokens.css with brand color variables"
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Global Design System",
+      "goal": "Define consistent design tokens and base UI",
+      "tasks": [
+        "In /lib/styles/tokens.css define primary, secondary, accent colors based on Quantum Rishi palette",
+        "Setup reusable Tailwind classes for card, button, and section spacing",
+        "Create typography scale (H1–H6, paragraph, small)",
+        "Create reusable Svelte components: Button, Card, SectionTitle, Badge",
+        "Test basic grid + flex layout responsiveness"
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Global Layout and Navigation",
+      "goal": "Build site-wide header, footer, and base structure",
+      "tasks": [
+        "Create Navbar.svelte with logo + tagline + category dropdowns",
+        "Add links: Home, Divisions, Studio, Technology, Contact",
+        "Create Footer.svelte with quick links, copyright, and social icons",
+        "Make Navbar sticky and dark-theme compatible",
+        "Add global transition animations on route change"
+      ]
+    },
+    {
+      "phase": 5,
+      "title": "Hero Section (Landing Page Intro)",
+      "goal": "Cinematic introduction for Quantum Rishi Ecosystem",
+      "tasks": [
+        "Create HeroSection.svelte",
+        "Headline: 'We Build Intelligent Autonomous Systems for a Secure, Scalable and Future-Ready India'",
+        "Add Subheadline: 'AI + Blockchain + Quantum-inspired Security — unified into one ecosystem'",
+        "Insert 3D background animation using Three.js (cosmic particle field)",
+        "Add CTAs: 'Launch QR Studio' and 'Explore Ecosystem'",
+        "Animate hero text with GSAP fade + upward reveal"
+      ]
+    },
+    {
+      "phase": 6,
+      "title": "Landing Page – Meta-Category Layout",
+      "goal": "Create categorized grid layout for all divisions",
+      "tasks": [
+        "Create Section: Digital Core, Applied Tech, Knowledge Systems, R&D & Vision",
+        "Each section header = SectionTitle component with neon underline",
+        "Each section grid = 5x2 responsive cards (divisions)",
+        "Hover: glow + display division tagline",
+        "Click: navigate to /divisions/[slug]"
+      ]
+    },
+    {
+      "phase": 7,
+      "title": "Division Data System",
+      "goal": "Centralize data of all divisions and modules",
+      "tasks": [
+        "Create /lib/data/divisions.json with structure:",
+        "{ 'qr.ai': { name: 'QR.AI', category: 'Digital Core', tagline: 'AI & ML Systems', color: '#28E5FF', services: ['LLM fine-tuning','Computer Vision','Predictive Analytics'] } }",
+        "Create DivisionsStore.ts to load JSON and export readable store",
+        "Connect landing grid to dynamic JSON data"
+      ]
+    },
+    {
+      "phase": 8,
+      "title": "Dynamic Division Routing",
+      "goal": "Enable /divisions/[slug] pages with automatic generation",
+      "tasks": [
+        "Create /src/routes/divisions/[slug]/+page.svelte",
+        "Use load() to fetch matching data from divisions.json",
+        "Add hero with division color + animated background",
+        "Render key modules / services as cards",
+        "Add CTA: 'Open Platform →' linking to planned sub-domain"
+      ]
+    },
+    {
+      "phase": 9,
+      "title": "Division-Specific Layout Variations",
+      "goal": "Give each division unique content type layout",
+      "tasks": [
+        "Add conditional layouts: Technical, Creative, or Knowledge",
+        "Example: QR.AI shows architecture diagram; QR.Digi shows media slider",
+        "Use component variants (TechLayout, CreativeLayout, EduLayout)",
+        "Apply accent colors automatically via data.color"
+      ]
+    },
+    {
+      "phase": 10,
+      "title": "Modules System (Nested under Divisions)",
+      "goal": "Enable clickable module-level pages linking to sub-domains",
+      "tasks": [
+        "Create folder: /src/routes/divisions/[slug]/modules/[module]/+page.svelte",
+        "Each module pulls data from modules.json (sub-collection of divisions)",
+        "Add CTA button redirecting to corresponding sub-domain (e.g. ai.quantum-rishi.com)",
+        "Style module cards with glowing hover effect"
+      ]
+    },
+    {
+      "phase": 11,
+      "title": "Motion & Interaction Enhancements",
+      "goal": "Polish user experience with high-end animation",
+      "tasks": [
+        "Integrate GSAP ScrollTrigger for section reveals",
+        "Add parallax scroll on hero and cosmic background",
+        "Create smooth scroll navigation across category sections",
+        "Implement hover pulse animations on CTA buttons"
+      ]
+    },
+    {
+      "phase": 12,
+      "title": "Global Responsiveness & Accessibility",
+      "goal": "Ensure accessibility and perfect scaling",
+      "tasks": [
+        "Optimize all sections for mobile-first design",
+        "Add ARIA labels and keyboard navigation for major components",
+        "Use prefers-reduced-motion for animation fallback",
+        "Ensure text contrast meets WCAG AA standards"
+      ]
+    },
+    {
+      "phase": 13,
+      "title": "SEO + Meta Data System",
+      "goal": "Integrate automatic SEO and social share metadata",
+      "tasks": [
+        "Add title + meta description from divisions.json",
+        "Implement dynamic OG tags per page",
+        "Add structured schema.org data for SoftwareApplication type",
+        "Integrate sitemap.xml + robots.txt"
+      ]
+    },
+    {
+      "phase": 14,
+      "title": "Performance Optimization",
+      "goal": "Fine-tune build output for speed and scalability",
+      "tasks": [
+        "Enable code splitting and lazy loading for heavy assets",
+        "Use image optimization and compression for icons/backgrounds",
+        "Test Lighthouse (target >90)",
+        "Implement Cloudflare cache headers"
+      ]
+    },
+    {
+      "phase": 15,
+      "title": "Testing & QA",
+      "goal": "Automate tests for UI and navigation",
+      "tasks": [
+        "Add Playwright for e2e testing of routing",
+        "Check mobile viewport scaling",
+        "Verify animation smoothness under 60fps",
+        "Fix any console errors"
+      ]
+    },
+    {
+      "phase": 16,
+      "title": "Deployment & Domain Configuration",
+      "goal": "Publish working site and connect domain",
+      "tasks": [
+        "Connect repo to Cloudflare Pages project",
+        "Set build command: `pnpm run build`",
+        "Verify base path routing works correctly",
+        "Connect domain: quantum-rishi.com",
+        "Verify HTTPS + redirects"
+      ]
+    },
+    {
+      "phase": 17,
+      "title": "Future Sub-Domain Preparation",
+      "goal": "Prepare base templates for each future micro-site",
+      "tasks": [
+        "Inside /apps create folders: ai, block, cloud, cyber, digi, studio, labs, future",
+        "Add README.md + minimal +page.svelte placeholder",
+        "Prepare DNS entries for each (ai.quantum-rishi.com etc.)",
+        "Add Turborepo workspace config for future separation"
+      ]
+    }
+  ]
 }

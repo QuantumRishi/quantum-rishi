@@ -1,9 +1,9 @@
 packages:
-  - 'apps/*'
+  - "apps/*"
 
 ignoredBuiltDependencies:
   - sharp
 
 onlyBuiltDependencies:
   - esbuild
-  - '@tailwindcss/oxide'
+  - "@tailwindcss/oxide"

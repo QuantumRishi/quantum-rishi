@@ -51,13 +51,13 @@ Users who prefer reduced motion (configured in their OS settings) will experienc
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-	/* All animations and transitions reduced to near-instant */
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		transition-duration: 0.01ms !important;
-	}
+  /* All animations and transitions reduced to near-instant */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 ```
 

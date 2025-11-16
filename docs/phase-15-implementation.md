@@ -151,11 +151,11 @@ Added test scripts:
 
 ```json
 {
-	"test": "playwright test",
-	"test:ui": "playwright test --ui",
-	"test:headed": "playwright test --headed",
-	"test:debug": "playwright test --debug",
-	"test:report": "playwright show-report"
+  "test": "playwright test",
+  "test:ui": "playwright test --ui",
+  "test:headed": "playwright test --headed",
+  "test:debug": "playwright test --debug",
+  "test:report": "playwright show-report"
 }
 ```
 
@@ -212,7 +212,7 @@ All performance targets from Phase 15:
 1. **HeroSection.svelte** (line 231):
 
    ```javascript
-   console.log('Launch QR Studio - Coming soon!');
+   console.log("Launch QR Studio - Coming soon!");
    ```
 
    - Purpose: Placeholder for future QR Studio navigation

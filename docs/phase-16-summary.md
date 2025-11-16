@@ -50,12 +50,13 @@ All tasks from Phase 16 of `qr_build_plan.json` have been successfully completed
 
 ### Configuration Files
 
-| File                                     | Purpose                        | Status |
-| ---------------------------------------- | ------------------------------ | ------ |
-| `wrangler.toml`                          | Cloudflare Pages configuration | ✅     |
-| `.github/workflows/cloudflare-pages.yml` | CI/CD automation               | ✅     |
-| `_headers`                               | Cache & security headers       | ✅     |
-| `svelte.config.js`                       | Cloudflare adapter config      | ✅     |
+| File                                     | Purpose                   | Status |
+| ---------------------------------------- | ------------------------- | ------ |
+| `.github/workflows/cloudflare-pages.yml` | CI/CD automation          | ✅     |
+| `_headers`                               | Cache & security headers  | ✅     |
+| `svelte.config.js`                       | Cloudflare adapter config | ✅     |
+
+> **Note:** Cloudflare Pages configuration is managed through the dashboard, not `wrangler.toml`.
 
 ### Build Verification
 
@@ -224,11 +225,12 @@ Based on Phase 14 optimizations:
 ### Created
 
 - `DEPLOYMENT.md`
-- `wrangler.toml`
 - `docs/phase-16-deployment-checklist.md`
 - `docs/phase-16-quickstart.md`
 - `docs/phase-16-summary.md`
 - `.github/workflows/cloudflare-pages.yml`
+
+> **Note:** Removed `wrangler.toml` as it is not required for Cloudflare Pages and can cause configuration conflicts.
 
 ### Modified
 

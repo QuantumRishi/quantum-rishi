@@ -137,13 +137,13 @@ When adding new tests:
 Example:
 
 ```typescript
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test.describe('New Feature', () => {
-	test('should do something', async ({ page }) => {
-		await page.goto('/');
-		await expect(page.locator('selector')).toBeVisible();
-	});
+test.describe("New Feature", () => {
+  test("should do something", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator("selector")).toBeVisible();
+  });
 });
 ```
 
