@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+.pnpm-debug.log*
+
+# Build outputs
+.svelte-kit
+build
+dist
+.output
+.vercel
+.netlify
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage
+.nyc_output
+playwright-report
+test-results
+
+# Wrangler (Cloudflare Workers - not needed for Pages)
+.wrangler
+.mf

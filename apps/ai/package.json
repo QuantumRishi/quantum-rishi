@@ -1,11 +1,11 @@
 {
-	"name": "@quantum-rishi/ai",
-	"version": "0.0.1",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
-	}
+  "name": "@quantum-rishi/ai",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
 }

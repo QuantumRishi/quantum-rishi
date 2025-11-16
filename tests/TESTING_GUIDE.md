@@ -292,7 +292,7 @@ The following console messages are intentional and not errors:
 1. **HeroSection.svelte** (line 231):
 
    ```javascript
-   console.log('Launch QR Studio - Coming soon!');
+   console.log("Launch QR Studio - Coming soon!");
    ```
 
    - Purpose: Placeholder for future QR Studio navigation
@@ -316,19 +316,19 @@ When adding new features, add corresponding tests:
 ### Test Structure Template
 
 ```typescript
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test.describe('Feature Name', () => {
-	test('should perform specific action', async ({ page }) => {
-		// 1. Navigate
-		await page.goto('/your-route');
+test.describe("Feature Name", () => {
+  test("should perform specific action", async ({ page }) => {
+    // 1. Navigate
+    await page.goto("/your-route");
 
-		// 2. Interact
-		await page.click('button');
+    // 2. Interact
+    await page.click("button");
 
-		// 3. Assert
-		await expect(page.locator('.result')).toBeVisible();
-	});
+    // 3. Assert
+    await expect(page.locator(".result")).toBeVisible();
+  });
 });
 ```
 
