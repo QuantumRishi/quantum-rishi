@@ -50,11 +50,11 @@ All tasks from Phase 16 of `qr_build_plan.json` have been successfully completed
 
 ### Configuration Files
 
-| File                                     | Purpose                        | Status |
-| ---------------------------------------- | ------------------------------ | ------ |
-| `.github/workflows/cloudflare-pages.yml` | CI/CD automation               | ✅     |
-| `_headers`                               | Cache & security headers       | ✅     |
-| `svelte.config.js`                       | Cloudflare adapter config      | ✅     |
+| File                                     | Purpose                   | Status |
+| ---------------------------------------- | ------------------------- | ------ |
+| `.github/workflows/cloudflare-pages.yml` | CI/CD automation          | ✅     |
+| `_headers`                               | Cache & security headers  | ✅     |
+| `svelte.config.js`                       | Cloudflare adapter config | ✅     |
 
 > **Note:** Cloudflare Pages configuration is managed through the dashboard, not `wrangler.toml`.
 

@@ -63,38 +63,38 @@ onMount(async () => {
 
 ```typescript
 export default defineConfig({
-	plugins: [
-		tailwindcss(),
-		imagetools({
-			defaultDirectives: (url) => {
-				if (url.searchParams.has('width')) {
-					return new URLSearchParams({
-						format: 'webp;avif;jpg',
-						quality: '80'
-					});
-				}
-				return new URLSearchParams();
-			}
-		}),
-		sveltekit()
-	],
-	build: {
-		rollupOptions: {
-			output: {
-				manualChunks: (id) => {
-					// Separate critical libraries into their own chunks
-					if (id.includes('node_modules/three')) return 'vendor-three';
-					if (id.includes('node_modules/gsap')) return 'vendor-gsap';
-					if (id.includes('node_modules/svelte')) return 'vendor-svelte';
-					if (id.includes('node_modules')) return 'vendor';
-				}
-			}
-		},
-		target: 'es2020',
-		chunkSizeWarningLimit: 600,
-		minify: 'esbuild',
-		cssCodeSplit: true
-	}
+  plugins: [
+    tailwindcss(),
+    imagetools({
+      defaultDirectives: (url) => {
+        if (url.searchParams.has("width")) {
+          return new URLSearchParams({
+            format: "webp;avif;jpg",
+            quality: "80",
+          });
+        }
+        return new URLSearchParams();
+      },
+    }),
+    sveltekit(),
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Separate critical libraries into their own chunks
+          if (id.includes("node_modules/three")) return "vendor-three";
+          if (id.includes("node_modules/gsap")) return "vendor-gsap";
+          if (id.includes("node_modules/svelte")) return "vendor-svelte";
+          if (id.includes("node_modules")) return "vendor";
+        },
+      },
+    },
+    target: "es2020",
+    chunkSizeWarningLimit: 600,
+    minify: "esbuild",
+    cssCodeSplit: true,
+  },
 });
 ```
 
@@ -143,20 +143,20 @@ The `vite-imagetools` plugin automatically generates optimized image formats:
 
 ```javascript
 // Before
-import adapter from '@sveltejs/adapter-auto';
+import adapter from "@sveltejs/adapter-auto";
 
 // After
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from "@sveltejs/adapter-cloudflare";
 
 const config = {
-	kit: {
-		adapter: adapter({
-			routes: {
-				include: ['/*'],
-				exclude: ['<all>']
-			}
-		})
-	}
+  kit: {
+    adapter: adapter({
+      routes: {
+        include: ["/*"],
+        exclude: ["<all>"],
+      },
+    }),
+  },
 };
 ```
 
@@ -236,19 +236,19 @@ With Cloudflare edge optimizations:
 
 ```typescript
 onMount(() => {
-	const observer = new IntersectionObserver(
-		async (entries) => {
-			if (entries[0].isIntersecting) {
-				// Load Three.js only when hero is visible
-				const THREE = await import('three');
-				initThreeScene(THREE);
-				observer.disconnect();
-			}
-		},
-		{ threshold: 0.1 }
-	);
+  const observer = new IntersectionObserver(
+    async (entries) => {
+      if (entries[0].isIntersecting) {
+        // Load Three.js only when hero is visible
+        const THREE = await import("three");
+        initThreeScene(THREE);
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.1 },
+  );
 
-	observer.observe(heroElement);
+  observer.observe(heroElement);
 });
 ```
 
@@ -258,17 +258,17 @@ Move particle calculations off main thread:
 
 ```typescript
 // particles.worker.ts
-self.addEventListener('message', (e) => {
-	const { particleCount } = e.data;
-	const positions = calculateParticlePositions(particleCount);
-	self.postMessage({ positions });
+self.addEventListener("message", (e) => {
+  const { particleCount } = e.data;
+  const positions = calculateParticlePositions(particleCount);
+  self.postMessage({ positions });
 });
 
 // component
-const worker = new Worker('/particles.worker.ts');
+const worker = new Worker("/particles.worker.ts");
 worker.postMessage({ particleCount: 1500 });
-worker.addEventListener('message', (e) => {
-	updateParticles(e.data.positions);
+worker.addEventListener("message", (e) => {
+  updateParticles(e.data.positions);
 });
 ```
 

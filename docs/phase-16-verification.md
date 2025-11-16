@@ -156,9 +156,14 @@ Cloudflare Pages deployment.
 
 ```json
 {
-	"version": 1,
-	"include": ["/*"],
-	"exclude": ["/_app/immutable/*", "/_app/version.json", "/robots.txt", "/sitemap.xml"]
+  "version": 1,
+  "include": ["/*"],
+  "exclude": [
+    "/_app/immutable/*",
+    "/_app/version.json",
+    "/robots.txt",
+    "/sitemap.xml"
+  ]
 }
 ```
 
@@ -179,10 +184,10 @@ Cloudflare Pages deployment.
 ```javascript
 // svelte.config.js
 adapter: adapter({
-	routes: {
-		include: ['/*'],
-		exclude: ['<all>']
-	}
+  routes: {
+    include: ["/*"],
+    exclude: ["<all>"],
+  },
 });
 ```
 
