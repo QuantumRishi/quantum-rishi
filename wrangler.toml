@@ -8,7 +8,7 @@ compatibility_date = "2024-10-30"
 pages_build_output_dir = ".svelte-kit/cloudflare"
 
 # For local development with wrangler pages dev
-[env.development]
+
 pages_build_output_dir = ".svelte-kit/cloudflare"
 
 # Route patterns (handled by SvelteKit adapter)
